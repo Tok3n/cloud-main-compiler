@@ -14,6 +14,8 @@ RUN \
 # Install Node.js
 RUN \
   cd /tmp && \
+  apt-get update && \
+  apt-get install -y wget && \
   wget http://nodejs.org/dist/node-latest.tar.gz && \
   tar xvzf node-latest.tar.gz && \
   rm -f node-latest.tar.gz && \
