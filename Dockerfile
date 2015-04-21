@@ -36,7 +36,8 @@ RUN npm install -g bower grunt-cli
 # Install Ruby.
 RUN \
   apt-get update && \
-  apt-get install -y ruby ruby-dev ruby-bundler && \
+  apt-get install -y ruby ruby-dev && \
+  gem install bundler && \
   rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
