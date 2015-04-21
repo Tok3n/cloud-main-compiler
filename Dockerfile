@@ -40,6 +40,11 @@ RUN \
   gem install bundler && \
   rm -rf /var/lib/apt/lists/*
 
+# Compiler specific
+RUN \
+  apt-get update && \
+  apt-get install -y curl rsync && \
+
 # Define working directory.
 WORKDIR /data/Cloud_Main/Modules/default
 
