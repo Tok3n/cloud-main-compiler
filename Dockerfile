@@ -50,7 +50,5 @@ RUN \
 # Define working directory.
 WORKDIR /data/Cloud_Main/Modules/default
 
-ENTRYPOINT ["bash", "init-compiler.bash"]
-
 # Define default command.
 CMD ["bash"]
