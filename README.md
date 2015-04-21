@@ -12,5 +12,3 @@ bash init-compiler.bash
 # Then begin compiling
 grunt --config=example
 ```
-
-Note: Browser_reload does *not* work in Docker. Be sure to disable it in the config.json
