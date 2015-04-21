@@ -1,7 +1,7 @@
 # Pull base image.
 FROM google/dart
 
-MANTAINER Victor Gonzalez <victor+dockerfile@tok3n.com>
+MAINTAINER Victor Gonzalez <victor+dockerfile@tok3n.com>
 
 # dockerfile/python
 # Install Python.
@@ -43,7 +43,7 @@ RUN \
 # Compiler specific
 RUN \
   apt-get update && \
-  apt-get install -y curl rsync && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends rsync curl && \
 
 # Define working directory.
 WORKDIR /data/Cloud_Main/Modules/default
