@@ -42,7 +42,7 @@ RUN \
 
 # Compiler specific
 RUN \
-  # Change policy for rsync
+  # Change policy for rsync (http://askubuntu.com/questions/365911/why-the-services-do-not-start-at-installation)
   echo $'#!/bin/sh\nexit 0' > /usr/sbin/policy-rc.d
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends rsync curl && \
